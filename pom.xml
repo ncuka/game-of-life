@@ -283,16 +283,19 @@
 	    	    <artifactId>cobertura-maven-plugin</artifactId>
 	    	    <version>${cobertura.version}</version>
 	    	    <configuration>
-                      <aggregate>true</aggregate>
-                      <format>xml</format>
-		      <forceMojoExecution>true</forceMojoExecution>
-	    	      <instrumentation>
+	              <formats>
+                        <format>xml</format>
+                        <format>html</format>
+	              </formats>
 <!--
+                      <aggregate>true</aggregate>
+	    	      <instrumentation>
+		      <forceMojoExecution>true</forceMojoExecution>
 	    	        <excludes>
 	    	          <exclude>**/*Test.class</exclude>
 	    	        </excludes>
--->
 	    	      </instrumentation>
+-->
 	    	    </configuration>
 	    	    <executions>
 	    	      <execution>
